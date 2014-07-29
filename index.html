@@ -117,10 +117,10 @@ box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
 padding:5px;border-radis:5px;width:35px;background-color:#a40000;float:right;
 }
 </style>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="jquery.js"></script>
 <script src="phonegap.js"></script>
-  <link rel="stylesheet" href="animate.min.css" />
-  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="animate.min.css" />
+<link rel="stylesheet" href="style.css" />
 <script>
 function ww()
 {
@@ -132,14 +132,12 @@ document.getElementById('c').style.width=b/1.05;
 document.getElementById('a').style.height=c/2.8;
 document.getElementById('b').style.height=c/2.8;
 document.getElementById('c').style.height=c/2.8;
-
 }
 function voila2(x)
 {
 if (x == "a"){foo2('a','b','c')}
 else if (x == "b"){foo2('b','a','c')}
 else if (x == "c"){foo2('c','a','b')}
-
 }
 function foo2(m1,m2,m3,m4,m5,m6)
 {
@@ -229,11 +227,16 @@ $('#'+pp).fadeIn('slow');
 voila(pp);
 }
 }
+
+$(document).ready(function() {
+ww();
+makeid()
+});
 </script>
 </head>
 
-<body id="bg" onclick="ww();makeid();">
-<div onclick="ww();makeid();" id="banner">
+<body id="bg">
+<div id="banner">
 <div style="float:left;color:black;margin-left:5%;font-size:28px;font-family: 'Lobster', cursive;">Mentalist</div>
 <div id="count">0</div>
 <img id="imgg" src="arg.png">
