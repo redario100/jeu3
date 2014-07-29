@@ -1,0 +1,14 @@
+<widget id="com.example.hello" version="0.0.1">
+        <name>HelloWorld</name>
+        <description>
+            Application créée et développée par Yourisoft
+        </description>
+        <author email="profesionel.reda@gmail.com" href="http://phonegap.com">
+            Bounar Reda
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+        <preference name="Fullscreen" value="true" />
+        <preference name="WebViewBounce" value="true" />
+		<icon src="icon.png" />
+    </widget>

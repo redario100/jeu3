@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<style>
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(mor.woff) format('woff');
+}
+body
+{
+overflow:hidden;
+}
+.fiwv
+{
+box-shadow:0 0 0.5em black;
+margin:10px;
+float:left;
+border:1px solid #00e909;
+text-align:center;
+color:transparent;
+cursor:pointer;
+background-color:#03d214;
+background-image: url(wink.png); background-repeat: no-repeat; text-align: center;
+background-position:center center;
+opacity:0.9;
+}
+.fiwr
+{
+box-shadow:0 0 0.5em black;
+margin:10px;
+opacity:0.9;
+float:left;
+border:1px solid black;
+text-align:center;
+color:transparent;
+background-color:#fa2d0e;
+cursor:pointer;
+background-image: url(sad.png); background-repeat: no-repeat; text-align: center;
+background-position:center center;
+}
+
+.pall
+{
+box-shadow:0 0 0.5em black;
+margin:10px;
+float:left;
+opacity:0.9;
+/*padding:150px 20px;*/
+border:1px solid black;
+text-align:center;
+background-color:#faaf0e;
+background-image: url(cool.png); background-repeat: no-repeat; text-align: center;
+background-position:center center;
+color:transparent;
+cursor:pointer;
+}
+
+#bg
+{
+background-color:black;
+background-image: url(bg.jpg);
+background-repeat: no-repeat;
+background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+#banner
+{
+z-index:999;
+float:left;
+background: #f7ce00; /* Old browsers */
+background: -moz-linear-gradient(top, #f7ce00 1%, #f49f27 54%, #f79400 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7ce00), color-stop(54%,#f49f27), color-stop(100%,#f79400)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #f7ce00 1%,#f49f27 54%,#f79400 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #f7ce00 1%,#f49f27 54%,#f79400 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #f7ce00 1%,#f49f27 54%,#f79400 100%); /* IE10+ */
+background: linear-gradient(to bottom, #f7ce00 1%,#f49f27 54%,#f79400 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ce00', endColorstr='#f79400',GradientType=0 ); /* IE6-9 */
+padding-right:10px;
+border-bottom:3px solid black;
+width:100%;
+padding-top:10px;padding-bottom:10px;
+margin-bottom:20px;
+top:0;
+left:0;
+position:fixed;
+}
+
+#count
+{
+background-color:#a40000;
+float:right;
+color:#ffe009;
+font-size:18px;
+padding:7px;
+border-top-right-radius:5px;border-bottom-right-radius:5px;
+background: -webkit-linear-gradient( #555, #2C2C2C);
+background:    -moz-linear-gradient( #555, #2C2C2C);
+background:     -ms-linear-gradient( #555, #2C2C2C);
+background:      -o-linear-gradient( #555, #2C2C2C);
+background:         linear-gradient( #555, #2C2C2C);
+box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+}
+
+#imgg
+{
+border-top-left-radius:5px;border-bottom-left-radius:5px;
+background: -webkit-linear-gradient( #555, #2C2C2C);
+background:    -moz-linear-gradient( #555, #2C2C2C);
+background:     -ms-linear-gradient( #555, #2C2C2C);
+background:      -o-linear-gradient( #555, #2C2C2C);
+background:         linear-gradient( #555, #2C2C2C);
+box-shadow: 1px 1px 10px black inset, 0 1px 0 rgba( 255, 255, 255, 0.4);
+padding:5px;border-radis:5px;width:35px;background-color:#a40000;float:right;
+}
+</style>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="phonegap.js"></script>
+  <link rel="stylesheet" href="animate.min.css" />
+  <link rel="stylesheet" href="style.css" />
+<script>
+function ww()
+{
+var b=$(window).width();
+var c=$(document).height()/1.5;
+document.getElementById('a').style.width=b/1.05;
+document.getElementById('b').style.width=b/1.05;
+document.getElementById('c').style.width=b/1.05;
+document.getElementById('a').style.height=c/2.8;
+document.getElementById('b').style.height=c/2.8;
+document.getElementById('c').style.height=c/2.8;
+
+}
+function voila2(x)
+{
+if (x == "a"){foo2('a','b','c')}
+else if (x == "b"){foo2('b','a','c')}
+else if (x == "c"){foo2('c','a','b')}
+
+}
+function foo2(m1,m2,m3,m4,m5,m6)
+{
+$("#"+m1).html("ok");
+$("#"+m2).html("A");
+$("#"+m3).html("A");
+$("#"+m4).html("A");
+$("#"+m5).html("A");
+$("#"+m6).html("A");
+}
+function makeid()
+{
+    var text = "";
+    var possible = "abc";
+
+    for( var i=0; i < 1; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+     //document.getElementById(text).innerHTML="ok";
+	 document.getElementById("val").innerHTML=text;
+	 voila2(text);
+	 var vvv=localStorage['vimo'];
+	 $('#count').html(vvv);
+	 
+}
+
+function foo(m1,m2,m3,m4,m5,m6)
+{
+document.getElementById(m1).className= "fiwv";
+document.getElementById(m2).className= "fiwr";
+document.getElementById(m3).className= "fiwr";
+
+
+setTimeout(function () {
+document.getElementById(m1).className= "pall";
+document.getElementById(m2).className= "pall";
+document.getElementById(m3).className= "pall";
+makeid();
+}, 2000);
+}
+function voila(x)
+{
+if (x == "a"){foo('a','b','c')}
+else if (x == "b"){foo('b','a','c')}
+else if (x == "c"){foo('c','a','b')}
+}
+
+function pok(m1,m2,m3,m4,m5,m6)
+{
+var n=$('#'+m1).html();
+if (n == 'ok')
+{
+var audio = new Audio('oui.mp3');
+audio.play();
+$('#m1').hide();
+$('#m1').fadeIn();
+document.getElementById(m1).className= "fiwv";
+var currentValue = $("#count").text();
+var newValue = parseInt(parseFloat(currentValue)) + 5;
+var tt=localStorage['vimo'] = newValue;
+$("#count").text(tt);
+document.getElementById(m2).className= "fiwr";
+document.getElementById(m3).className= "fiwr";
+setTimeout(function () {
+document.getElementById(m1).className = "pall"; 
+document.getElementById(m2).className = "pall"; 
+document.getElementById(m3).className = "pall"; 
+//$("#"+m1).css("background-color","#f7931d");
+//$("#"+m2).css("background-color","#f7931d");
+//$("#"+m3).css("background-color","#f7931d");
+//$("#"+m4).css("background-color","#f7931d");
+//$("#"+m5).css("background-color","#f7931d");
+//$("#"+m6).css("background-color","#f7931d");
+makeid();
+}, 2000);
+}
+else
+{
+/*var currentValue = $("#count").text();
+var newValue = parseInt(parseFloat(currentValue)) - 5;
+var tt=localStorage['vimo'] = newValue;
+$("#count").text(tt);*/
+var audio = new Audio('non.wav');
+audio.play();
+var pp=$("#val").html();
+$('#'+pp).hide();
+$('#'+pp).fadeIn('slow');
+voila(pp);
+}
+}
+</script>
+</head>
+
+<body id="bg" onload="ww();makeid();">
+<div id="banner">
+<div style="float:left;color:black;margin-left:5%;font-size:28px;font-family: 'Lobster', cursive;">Mentalist</div>
+<div id="count">0</div>
+<img id="imgg" src="arg.png">
+
+</div>
+<div style="display:none" id="val"></div>
+<div style="margin-top:60px;width:100%">
+<div class="pall" onclick="pok('a','b','c')" id="a">A</div>
+<div class="pall" onclick="pok('b','a','c')" id="b">A</div>
+<div class="pall" onclick="pok('c','a','b')" id="c">A</div>
+</div>
+</body>
+</html>
