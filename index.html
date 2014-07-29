@@ -217,10 +217,10 @@ makeid();
 }
 else
 {
-/*var currentValue = $("#count").text();
+var currentValue = $("#count").text();
 var newValue = parseInt(parseFloat(currentValue)) - 5;
 var tt=localStorage['vimo'] = newValue;
-$("#count").text(tt);*/
+$("#count").text(tt);
 var audio = new Audio('non.wav');
 audio.play();
 var pp=$("#val").html();
@@ -233,7 +233,7 @@ voila(pp);
 </head>
 
 <body id="bg" onload="ww();makeid();">
-<div id="banner">
+<div onclick="ww();makeid();" id="banner">
 <div style="float:left;color:black;margin-left:5%;font-size:28px;font-family: 'Lobster', cursive;">Mentalist</div>
 <div id="count">0</div>
 <img id="imgg" src="arg.png">
